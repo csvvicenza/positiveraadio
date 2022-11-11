@@ -1,0 +1,21 @@
+{
+    "name": "Positive Radio Progressive Web App",
+    "short_name": "PositiveRadio",
+    "description": "Progressive Web App di Positive Radio, la web radio del Centro di Servizio per il Volontariato della provincia di Vicenza.",
+    "icons": [
+      {
+        "src": "icons/icon-32.png",
+        "sizes": "32x32",
+        "type": "image/png"
+      },
+      {
+        "src": "icons/icon-512.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ],
+    "start_url": "/",
+    "display": "fullscreen",
+    "theme_color": "#1d1d1b",
+    "background_color": "#1d1d1b"
+  }
