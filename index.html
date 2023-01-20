@@ -15,26 +15,6 @@
     <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon-iphone-retina.png" type="image/png">
     <link rel="apple-touch-icon" sizes="192x192" href="icons/icon-192.png" type="image/png">
     <link rel="mask-icon" href="icons/safari-pinned-tab.svg" color="#5bbad5">
-    <script>
-        window.addEventListener('load', () => {
-        registerSW();
-        });
-    
-        // Register the Service Worker
-        async function registerSW() {
-        if ('serviceWorker' in navigator) {
-            try {
-            await navigator
-                    .serviceWorker
-                    .register('serviceworker.js');
-            }
-            catch (e) {
-            console.log('SW registration failed');
-            }
-        }
-        }
-    </script>
-    
     <title>CSV Positive Radio</title>
     <style>
         body {
@@ -79,6 +59,17 @@
 </head>
 
 <body>
+    <script>
+        window.addEventListener('installready', function(e){
+				
+				  //Show your own installation UI
+				  //Include our Install Button code for best results
+				  //e.detail.ios is true if the user is on Safari/iOS. 
+				  //Or false if it's a native prompt (all other platforms)
+				  console.log(e.detail.ios); 
+				
+			});
+    </script>
     <button class="progressier-install-button" data-icons="false" data-install="Install" data-installed="Installed" ></button>
    <iframe scrolling="0" allow="autoplay" frameborder="no" style="width: 100%; height: 100vh" src="https://share.xdevel.com/player/2800"></iframe>
     <!-- Bootstrap core JS-->
